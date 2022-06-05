@@ -6,13 +6,14 @@ plugins {
     application
     kotlin("jvm") version "1.6.21"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 
 }
 
 group = "ts_binary_samples.lukaspanni.de"
 version = "0.0.1"
 application {
-    mainClass.set("ts_binary_samples.lukaspanni.de.ApplicationKt")
+    mainClass.set("de.lukaspanni.tsbinary_samples.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
